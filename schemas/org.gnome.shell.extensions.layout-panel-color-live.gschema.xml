@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.layout-panel-color-live" path="/org/gnome/shell/extensions/layout-panel-color-live/">
+    <key name="panel-enabled" type="b">
+      <default>true</default>
+      <summary>Enable top panel coloring</summary>
+      <description>When true, the extension changes the top panel color by layout.</description>
+    </key>
+
+    <key name="dock-enabled" type="b">
+      <default>true</default>
+      <summary>Enable dock coloring</summary>
+      <description>When true, the extension changes the Ubuntu Dock background color by layout.</description>
+    </key>
+
+    <key name="color-en" type="s">
+      <default>'rgba(38, 86, 148, 0.92)'</default>
+      <summary>Color for English layout</summary>
+      <description>RGBA color used when the EN layout is active.</description>
+    </key>
+
+    <key name="color-ru" type="s">
+      <default>'rgba(132, 52, 63, 0.92)'</default>
+      <summary>Color for Russian layout</summary>
+      <description>RGBA color used when the RU layout is active.</description>
+    </key>
+
+  </schema>
+</schemalist>

@@ -1,0 +1,10 @@
+{
+  "uuid": "layout-panel-color-live@anton.local",
+  "name": "Layout Panel Color Live",
+  "description": "Changes top panel and dock color based on current keyboard layout.",
+  "version": 4,
+  "settings-schema": "org.gnome.shell.extensions.layout-panel-color-live",
+  "shell-version": [
+    "46"
+  ]
+}
