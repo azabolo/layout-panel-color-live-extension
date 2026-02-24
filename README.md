@@ -5,6 +5,7 @@ Changes top panel and Ubuntu Dock color based on active keyboard layout (EN/RU).
 ## Features
 - Separate toggles for top panel and dock coloring
 - Custom EN and RU colors
+- Optional right-side dock flag-like strip with adjustable width and edge offset
 - Preferences window via GNOME Extensions app
 
 ## Install (local)

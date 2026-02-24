@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dock Flag Strip Preview</title>
+  <style>
+    :root {
+      --dock-bg: #1f1f1f;
+      --dock-height: 120px;
+      --dock-width: 280px;
+      --flag-strip-width: 12px;
+      --flag-strip-offset: 0px;
+    }
+
+    body {
+      margin: 24px;
+      font-family: Arial, sans-serif;
+      background: #131313;
+      color: #ddd;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 420px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px;
+      border: 1px solid #2f2f2f;
+      background: #1f1f1f;
+      border-radius: 10px;
+    }
+
+    .label {
+      font-size: 14px;
+      line-height: 1.4;
+      width: 160px;
+    }
+
+    .dock {
+      position: relative;
+      width: var(--dock-width);
+      height: var(--dock-height);
+      border-radius: 8px;
+      background: linear-gradient(to right, #2a2a2a, #1a1a1a);
+      overflow: hidden;
+      border: 1px solid #3a3a3a;
+      box-shadow: 0 8px 22px rgba(0,0,0,.4);
+    }
+
+    .strip {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: var(--flag-strip-width);
+      height: 100%;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .en-strip {
+      background-image: linear-gradient(
+        to bottom,
+        #002f6c 0% 33.333%,
+        #c8102f 33.333% 51.852%,
+        #ffffff 51.852% 57.407%,
+        #c8102f 57.407% 75.926%,
+        #ffffff 75.926% 81.481%,
+        #c8102f 81.481% 100%
+      );
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35), inset -1px 0 0 rgba(0,0,0,0.2);
+    }
+
+    .ru-strip {
+      background-image: linear-gradient(to bottom, #ffffff 0% 33.333%, #005bbb 33.333% 66.666%, #d52b1e 66.666% 100%);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #b0b0b0;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Как сейчас выглядит флажок Dock-Stripe</h1>
+
+  <div class="legend">
+    <div class="card">
+      <div class="label"><strong>EN:</strong> синий-широкий красный-тонкая белая-широкая красный-тонкая белая-широкая красный</div>
+      <div class="dock">
+        <div class="strip en-strip" style="right: var(--flag-strip-offset);"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label"><strong>RU:</strong> вертикальный градиент (белый-голубой-красный)</div>
+      <div class="dock">
+        <div class="strip ru-strip" style="right: var(--flag-strip-offset);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="caption">
+    Это повторяет текущий CSS-эффект из расширения: полоса рисуется в правом краю dock actor через <code>background-image</code>,<br/>
+    без настроек цвета в prefs. Ширина задаётся через <code>dock-flag-width</code>,
+    отступ от края — через <code>dock-flag-offset</code>.
+  </div>
+</body>
+</html>
